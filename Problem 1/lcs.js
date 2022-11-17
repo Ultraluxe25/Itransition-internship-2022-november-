@@ -1,0 +1,1 @@
+function lcs(e){if(!e.length)return"";let l=e.reduce((e,l)=>e.length<=l.length?e:l),t=l.length;for(let r=t;r>0;r--)for(let n=0;n<=t-r;n++){let c=l.slice(n,r+n);if(e.every(e=>e.includes(c)))return c}return""}console.log(lcs(process.argv.slice(2)));
