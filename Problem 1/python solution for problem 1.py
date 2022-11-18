@@ -7,8 +7,6 @@ def find_longest_substring(strings):
     shortest_string_length = min(map(len, strings))
     shortest_strings = [string for string in strings if len(string) == shortest_string_length]
 
-    # return shortest_string
-    # return shortest_string_length
     x = " ".join(shortest_strings)
     shortest_string_parts = [''.join(l) for i in range(len(x), 0, -1) for l in combinations(x, i)]
     # here we concatinate chars in whole words from list of tuples in one common list
@@ -19,12 +17,8 @@ def find_longest_substring(strings):
     return ''
 
 
-words = input().split()  # makes list from strings in lower case
-# print(words)
+words = input().split()  # makes list from strings
 print(find_longest_substring(words))
-
-# print(combinations('ABCDEFZ', 4))
-
 
 # tests for checking the code
 '''
